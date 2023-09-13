@@ -1,10 +1,19 @@
-import React from 'react'
+import './App.css'
+import { useState } from "react"
+
 
 const App = () => {
+  const [inpColor,setColor]=  useState('rgb(44, 43, 43)')
   return (
-    <div className='main'>
-      <center><h1>Hello 30 Days Of React</h1></center>
-    </div>
+    <main id="main" style={{background: inpColor}}>
+      <input
+         id="inpBox"
+         type="text"
+         placeholder="Enter any Color Name"
+         value={inpColor}
+         onChange={(e)=>setColor(e.target.value)}
+        />
+    </main>
   )
 }
 
